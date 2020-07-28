@@ -1,5 +1,11 @@
-module NoMissingDocumentation exposing (..)
+module NoMissingDocumentation exposing (rule)
 
+{-| Make sure that every top level declaration is documented.
+
+# Rule
+
+@docs rule
+-}
 
 import Elm.Syntax.Declaration exposing (Declaration(..))
 import Elm.Syntax.Documentation exposing (Documentation)
@@ -8,7 +14,24 @@ import Elm.Syntax.Range exposing (Range)
 import Review.Rule as Rule exposing (Direction(..), Error, Rule)
 
 
-{-| Rule configuration for checking every top level declarations has documentation
+{-|
+
+
+## Usage
+
+After adding [elm-review](https://package.elm-lang.org/packages/jfmengels/elm-review/latest/) to your project, import this rule to
+`ReviewConfig.elm` file and add it to the config.
+
+
+## Example configuration
+
+    import NoMissingDocumentation
+    import Review.Rule exposing (Rule)
+
+    config : List Rule
+    config =
+        [ NoMissingDocumentation.rule ]
+
 -}
 rule : Rule
 rule =
