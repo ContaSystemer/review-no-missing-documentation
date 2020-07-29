@@ -1,6 +1,6 @@
 {
     "type": "package",
-    "name": "ContaSystemer/review-no-missing-documentation",
+    "name": "ContaSystemer/elm-review-no-missing-documentation",
     "summary": "elm-review rule to enforce documentation for every top level declaration\n\n",
     "license": "BSD-3-Clause",
     "version": "1.0.0",
